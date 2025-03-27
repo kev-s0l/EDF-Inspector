@@ -1,13 +1,12 @@
 import pyedflib
 
-# Load the EDF file
+# Loading EDF file
 edf_file = "C:/Users/kevin/Desktop/RESEARCH LAB/DummyData.edf"
 edf = pyedflib.EdfReader(edf_file)
 
-# Define number of sample points to use --> Adjustable
-data_chunk_size = 10 # Here I wanted to use 10 
+# Define the number of sample points to display per signal (change as needed)
+data_chunk_size = 10
 
-# Open a new file 
 with open("edf_output_preview.txt", "w") as file:
     # Write basic EDF file information
     file.write("========== EDF File Information ==========\n")
@@ -17,7 +16,7 @@ with open("edf_output_preview.txt", "w") as file:
 
     file.write("========== Signal Data ==========\n\n")
 
-    # Loop through signals
+    # Loop through each signal
     for i in range(edf.signals_in_file):
         channel_name = edf.getLabel(i)
         signal_data = edf.readSignal(i)
@@ -32,5 +31,4 @@ with open("edf_output_preview.txt", "w") as file:
         # Write the total length of the signal
         file.write(f"Signal Length: {len(signal_data)}\n\n")
 
-# Close file
 edf.close()
