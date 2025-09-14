@@ -36,16 +36,16 @@ Install the required package:
 3. The results will be saved in edf_output_preview.txt.
 
 ## Example Output
-========== EDF File Information ==========
-File Duration: 600 seconds
-Start Date: 2025-09-14 10:30:00
-Number of Signals: 6
 
-========== Signal Data ==========
+      ========== EDF File Information ==========
+      File Duration: 600 seconds
+      Start Date: 2025-09-14 10:30:00
+      Number of Signals: 6
 
-Reading Signal 0: F4:M1
-Data chunk: [5.0, 4.8, 4.9, 5.1, 4.7, 4.9, 5.0, 5.2, 5.0, 4.9]
-Signal Length: 3000
+      ========== Signal Data ==========
+      Reading Signal 0: F4:M1
+      Data chunk: [5.0, 4.8, 4.9, 5.1, 4.7, 4.9, 5.0, 5.2, 5.0, 4.9]
+      Signal Length: 3000
 
 ## Notes
 - This script is intended as a support tool for inspecting EDF files before deeper analysis.
